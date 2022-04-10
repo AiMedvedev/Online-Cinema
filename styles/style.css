@@ -1,0 +1,531 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    background: #17161B;
+    color: #FFF;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul>li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6  {
+    padding: 0;
+    margin: 0;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header {
+    grid-area: my-header;
+}
+
+.aside {
+    grid-area: my-aside;
+}
+
+.main {
+    grid-area: my-main;
+}
+
+.grid {
+    display: grid;
+    gap: 8rem 0;
+    grid-template-areas:
+    "my-header my-header my-header"
+    "my-aside my-main my-main"
+    "my-aside my-main my-main";
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+.grid-init {
+    max-width: 144rem;
+    margin: auto;
+    padding: 3rem 2.4rem 4rem;
+}
+
+.header__wrap {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    font-weight: 700;
+    font-size: 6.4rem;
+    line-height: 117%;
+    margin-right: 7rem;
+}
+
+.header__nav a {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 117%;
+}
+
+.header__nav a:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.header__nav a:hover {
+    text-decoration: underline;
+}
+
+.header__nav {
+    margin-right: 9.2rem;
+}
+
+.header__find {
+    width: 33rem;
+    height: 4.1rem;
+    border-radius: .8rem;
+    margin-right: 3.9rem;
+}
+
+input {
+    height: 100%;
+    width: 100%;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 115%;
+    border-radius: .8rem;
+    background: rgba(255, 255, 255, 0.08) url(../img/find.svg);
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    background-position: top 50% right 1.5rem;
+    color: #FFF;
+    padding-left: 1.5rem;
+}
+
+.header__find input::placeholder {
+    font-size: 2rem;
+    color: #FFF;
+}
+
+.header__date {
+    text-align: center;
+    margin-right: 8.6rem;
+    color: #FFF;
+}
+
+.header__hours {
+    font-size: 2rem;
+    line-height: 115%;
+    margin-bottom: .4rem;
+}
+
+.header__days {
+    font-size: 1.2rem;
+    line-height: 117%;
+}
+
+.header img {
+   height: 6rem;
+   width: 6rem;
+   border-radius: 50%;
+}
+
+.main-display__trailer {
+    position: relative;
+    width: 98%;
+    height: 20.2rem;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/spider-man__trailer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.6rem;
+    padding-top: 1.9rem;
+    padding-left: 1.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-display__views {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 119%;
+}
+
+.main-display__header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 117%;
+    margin-bottom: .5rem;
+}
+
+.button-play__wrap,
+.button-play__wrap-small {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.07);
+    width: 8.1rem;
+    height: 8.1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-play {
+    width: 4rem;
+    height: 4rem;
+    border-radius: .2rem;
+    background: transparent;
+}
+
+.button-play img {
+    padding-left: .5rem;
+}
+
+.main-display__name {
+    padding-bottom: 1.9rem;
+}
+
+.main-display__date {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 115%;
+}
+
+.trending-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.trending-title__left,
+.trending-title__right {
+    display: flex;
+    align-items: center;
+}
+
+.trending-title__main {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 115%;
+    padding-right: 2rem;
+}
+
+.trending-title__count {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.trending-title__right span {
+    font-size: 1.4rem;
+    line-height: 117%;
+    color: rgba(255, 255, 255, 0.2);
+    margin-right: .8rem;
+}
+
+.trending-title__right img {
+    width: 2.1rem;
+    height: 1.6rem;
+    margin-right: 2rem;
+}
+
+.trending,
+.popular {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+}
+
+.trending__item {
+    background: url(../img/spider-man_promo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 47%;
+    height: 25.1rem;
+    border-radius: 1.6rem;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.trending__plash {
+    position: absolute;
+    top: 2.3rem;
+    left: 3.2rem;
+    font-size: 1.4rem;
+    line-height: 117%;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(1.6rem);
+    border-radius: 1.6rem;
+    padding: .4rem 1.3rem;
+}
+
+.trending__footer-title {
+    margin-left: 5rem;  
+}
+
+.trending__footer,
+.popular__footer {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.8rem 1rem 1.8rem 1.4rem;
+    position: relative;
+    border-radius: 1.6rem;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.trending__footer-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trending__header {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 120%;
+    padding-bottom: .2rem;
+}
+
+.trending__date {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.trending__time {
+    font-size: 1.4rem;
+    line-height: 114%;
+    color: #000000;
+    padding: .4rem 1.3rem;
+    background: #FFF;
+    border-radius: 1.6rem;
+    margin-right: 1rem;
+}
+
+.small {
+    width: 5rem;
+    height: 5rem;
+    left: 7%;
+}
+
+.small-plus {
+    width: 3rem;
+    height: 3rem;
+    left: 10%;
+}
+
+.button-play__wrap.small {
+    width: 3rem;
+    height: 3rem;
+    
+}
+
+.button-play__wrap.small-plus {
+    width: 2rem;
+    height: 2rem;
+    padding-right: .4rem;
+    cursor: pointer;
+}
+
+.button-play__wrap.small-plus .button-play {
+    width: 2rem;
+    height: 2rem;
+    border-radius: .2rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-play.small-plus img {
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;    
+}
+
+.popular__item {
+    background: url(../img/footer-pic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30%;
+    height: 19.2rem;
+    border-radius: 1.6rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.popular__footer {
+    display: flex;
+    padding: .8rem 1.9rem .8rem 6.4rem;
+}
+
+.popular__header {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;
+    margin-bottom: .2rem;
+}
+
+.popular__date {
+    font-weight: 700;
+    font-size: .8rem;
+    line-height: 113%;
+}
+
+.popular-rating {
+    display: flex;
+    align-items: center;
+}
+
+.popular__img img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.popular-rating span {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 150%;
+    margin-left: .4rem;
+}
+
+
+
+
+@media (max-width: 108em) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 105em) {
+    html {
+        font-size: 8.75px;
+    }
+}
+
+@media (max-width: 91.5em) {
+    html {
+        font-size: 7.9px;
+    }
+}
+
+@media (max-width: 91em) {
+    html {
+        font-size: 8.4px;
+    }
+}
+
+@media (max-width: 90em) {
+    html {
+        font-size: 7.9px;
+    }
+}
+
+@media (max-width: 80em) {
+    html {
+        font-size: 7.2px;
+    }
+}
+
+@media (max-width: 72em) {
+    html {
+        font-size: 6.5px;
+    }
+}
+
+@media (max-width: 64em) {
+    html {
+        font-size: 5.5px;
+    }
+}
+
+@media (max-width: 48em) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 44em) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 38em) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 34em) {
+    html {
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 30em) {
+    html {
+        font-size: 6px;
+    }
+}
+
+@media (max-width: 26em) {
+    html {
+        font-size: 4.5px;
+    }
+}
+
+@media (max-width: 21em) {
+    html {
+        font-size: 4.4px;
+    }
+}
