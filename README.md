@@ -1,5 +1,8 @@
 # Online-Cinema
+Верстка сайта онлайн-кинотеатра по макету Figma.
 
-Интенсив по верстке сайта по макету Figma.
+## Запуск
+https://online-cinema-iota.vercel.app/
 
-Использованы: HTML, CSS, Figma.
+## Использованы
+HTML, CSS, Figma.
